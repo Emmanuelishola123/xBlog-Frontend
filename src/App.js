@@ -1,24 +1,315 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { NavLink } from "react-router-dom";
+import { PostCard, PostTag } from "./components";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Box mt={4} position="relative">
+      <Flex>
+        <Box
+          position={"sticky"}
+          top="75px"
+          as="aside"
+          width={"100%"}
+          maxWidth={{ base: "230px", md: "290px" }}
+          display={{ base: "none", md: "block" }}
+          mr={3}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Flex direction={"column"} gap={1}>
+            {/* <Text
+              fontWeight={"bold"}
+              fontSize="2xl"
+              color={"gray.500"}
+              p={2}
+              borderRadius={"md"}
+            >
+              Menu
+            </Text> */}
+            <NavLink to="/">
+              <Flex
+                alignItems={"center"}
+                gap={2}
+                width={"100%"}
+                px={3}
+                py={2}
+                borderRadius="lg"
+                fontWeight="semibold"
+                fontSize={"xl"}
+                minWidth="100%"
+                _hover={{ color: "blue", bg: "white" }}
+              >
+                <Image
+                  src="/assets/logo.png"
+                  width={10}
+                  height={10}
+                  rounded="sm"
+                />
+                Home
+              </Flex>
+            </NavLink>
+            <NavLink to="/">
+              <Flex
+                alignItems={"center"}
+                gap={2}
+                width={"100%"}
+                as={"h6"}
+                px={3}
+                py={2}
+                borderRadius="lg"
+                fontWeight="semibold"
+                fontSize={"xl"}
+                minWidth="100%"
+                _hover={{ color: "blue", bg: "white" }}
+              >
+                <Image
+                  src="/assets/logo.png"
+                  width={10}
+                  height={10}
+                  rounded="sm"
+                />
+                Home
+              </Flex>
+            </NavLink>
+            <NavLink to="/">
+              <Flex
+                alignItems={"center"}
+                gap={2}
+                width={"100%"}
+                as={"h6"}
+                px={3}
+                py={2}
+                borderRadius="lg"
+                fontWeight="semibold"
+                fontSize={"xl"}
+                minWidth="100%"
+                _hover={{ color: "blue", bg: "white" }}
+              >
+                <Image
+                  src="/assets/logo.png"
+                  width={10}
+                  height={10}
+                  rounded="sm"
+                />
+                Home
+              </Flex>
+            </NavLink>
+            <NavLink to="/">
+              <Flex
+                alignItems={"center"}
+                gap={2}
+                width={"100%"}
+                as={"h6"}
+                px={3}
+                py={2}
+                borderRadius="lg"
+                fontWeight="semibold"
+                fontSize={"xl"}
+                minWidth="100%"
+                _hover={{ color: "blue", bg: "white" }}
+              >
+                <Image
+                  src="/assets/logo.png"
+                  width={10}
+                  height={10}
+                  rounded="sm"
+                />
+                Home
+              </Flex>
+            </NavLink>
+            <NavLink to="/">
+              <Flex
+                alignItems={"center"}
+                gap={2}
+                width={"100%"}
+                as={"h6"}
+                px={3}
+                py={2}
+                borderRadius="lg"
+                fontWeight="semibold"
+                fontSize={"xl"}
+                minWidth="100%"
+                _hover={{ color: "blue", bg: "white" }}
+              >
+                <Image
+                  src="/assets/logo.png"
+                  width={10}
+                  height={10}
+                  rounded="sm"
+                />
+                Home
+              </Flex>
+            </NavLink>
+            <NavLink to="/">
+              <Flex
+                alignItems={"center"}
+                gap={2}
+                width={"100%"}
+                as={"h6"}
+                px={3}
+                py={2}
+                borderRadius="lg"
+                fontWeight="semibold"
+                fontSize={"xl"}
+                minWidth="100%"
+                _hover={{ color: "blue", bg: "white" }}
+              >
+                <Image
+                  src="/assets/logo.png"
+                  width={10}
+                  height={10}
+                  rounded="sm"
+                />
+                Home
+              </Flex>
+            </NavLink>
+          </Flex>
+          <Flex direction={"column"} gap={3}>
+            <Text
+              fontWeight={"bold"}
+              fontSize="2xl"
+              color={"gray.500"}
+              p={2}
+              borderRadius={"md"}
+            >
+              My Tags
+            </Text>
+            <NavLink to="/">
+              <Text
+                width={"100%"}
+                as={"h6"}
+                px={3}
+                py={2}
+                borderRadius="lg"
+                fontWeight="semibold"
+                fontSize={"xl"}
+                minWidth="100%"
+                _hover={{ color: "blue", bg: "white" }}
+              >
+                #WebDev
+              </Text>
+            </NavLink>
+            <NavLink to="/">
+              <Text
+                width={"100%"}
+                as={"h6"}
+                px={3}
+                py={2}
+                borderRadius="lg"
+                fontWeight="semibold"
+                fontSize={"xl"}
+                minWidth="100%"
+                _hover={{ color: "blue", bg: "white" }}
+              >
+                #Software
+              </Text>
+            </NavLink>
+            <NavLink to="/">
+              <Text
+                width={"100%"}
+                as={"h6"}
+                px={3}
+                py={2}
+                borderRadius="lg"
+                fontWeight="semibold"
+                fontSize={"xl"}
+                minWidth="100%"
+                _hover={{ color: "blue", bg: "white" }}
+              >
+                #RegExp
+              </Text>
+            </NavLink>
+            <NavLink to="/">
+              <Text
+                width={"100%"}
+                as={"h6"}
+                px={3}
+                py={2}
+                borderRadius="lg"
+                fontWeight="semibold"
+                fontSize={"xl"}
+                minWidth="100%"
+                _hover={{ color: "blue", bg: "white" }}
+              >
+                #JS
+              </Text>
+            </NavLink>
+
+            <NavLink to="/">
+              <Text
+                width={"100%"}
+                as={"h6"}
+                px={3}
+                py={2}
+                borderRadius="lg"
+                fontWeight="semibold"
+                fontSize={"xl"}
+                minWidth="100%"
+                _hover={{ color: "blue", bg: "white" }}
+              >
+                #Linux
+              </Text>
+            </NavLink>
+          </Flex>
+        </Box>
+
+        <Box as="main" flex={1}>
+          <Flex alignItems={"center"} gap={4}>
+            <Text
+              fontWeight={"bold"}
+              fontSize="lg"
+              _hover={{ bg: "white", color: "blue" }}
+              p={3}
+              borderRadius={"md"}
+            >
+              <NavLink to="/"> Relevant</NavLink>
+            </Text>
+            <Text
+              fontWeight={"bold"}
+              fontSize="lg"
+              _hover={{ bg: "white", color: "blue" }}
+              p={3}
+              borderRadius={"md"}
+            >
+              <NavLink to="/"> Latest</NavLink>
+            </Text>
+            <Text
+              fontWeight={"bold"}
+              fontSize="lg"
+              _hover={{ bg: "white", color: "blue" }}
+              p={3}
+              borderRadius={"md"}
+            >
+              <NavLink to="/"> Top</NavLink>
+            </Text>
+          </Flex>
+          {[1, 2, 3, 4, 5, 6].map((i) => (
+            <PostCard key={i} />
+          ))}
+        </Box>
+
+        <Box
+          position={"sticky"}
+          top="75px"
+          height={"auto"}
+          as="aside"
+          width={"100%"}
+          maxWidth={{ base: "290px", md: "320px" }}
+          display={{ base: "none", lg: "block" }}
+          ml={3}
+        >
+          {/* <Text
+            fontWeight={"bold"}
+            fontSize="2xl"
+            color={"gray.500"}
+            p={2}
+            borderRadius={"md"}
+          >
+            Let's Discuss
+          </Text> */}
+          <PostTag />
+        </Box>
+      </Flex>
+    </Box>
   );
 }
 
