@@ -4,7 +4,7 @@ import { PostCard, PostTag } from "./components";
 
 function App() {
   return (
-    <Box mt={4} position="relative">
+    <Box mt={4} position="relative" px={{ base: 6, lg: 10 }}>
       <Flex>
         <Box
           position={"sticky"}

@@ -17,7 +17,7 @@ const currentUser = true;
 
 function Header() {
   return (
-    <Box bg="white" shadow={"base"} position="sticky" top="0" zIndex={999}>
+    <Box bg="white" shadow={"base"} position="sticky" top="0" left="0" zIndex={999}>
       <Flex
         justifyContent={"space-between"}
         alignItems="center"
@@ -41,6 +41,7 @@ function Header() {
               src="/assets/logo.png"
               alt="logo"
               width={{ base: "100px", lg: "120px" }}
+              maxHeight='70px'
             />
           </Link>
           <Flex
@@ -81,7 +82,7 @@ function Header() {
           >
             <BsSearch />
           </IconButton>
-          {currentUser ? (
+          {!currentUser ? (
             <>
               <IconButton
                 size={"lg"}
@@ -101,11 +102,12 @@ function Header() {
                 px={4}
                 py={2}
                 variant="outline"
+                color={'black'}
               >
-                Login
+                  <Link to='/auth/login'>Login</Link>
               </Button>
               <Button px={4} py={2} colorScheme="blue">
-                Create Account
+              <Link to='/auth/join'>Create Account</Link> 
               </Button>
             </>
           )}

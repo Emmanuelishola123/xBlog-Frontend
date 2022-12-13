@@ -16,12 +16,12 @@ function Post() {
   return (
     <Box
       width={"100%"}
-      mt={2}
+      mb={2}
       bg="white"
       rounded={"lg"}
       shadow="sm"
       mx="auto"
-     
+      border={{base: 'none', md: '1px solid #dcdcdc' }}     
     >
       <Image src="/assets/logo.png" width="100%" height="210px" />
       <Flex alignItems={"flex-start"} px="6" py={3} gap={2} direction={"column"}>
